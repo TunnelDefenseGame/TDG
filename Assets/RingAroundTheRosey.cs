@@ -27,14 +27,14 @@ public class RingAroundTheRosey : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey(KeyCode.LeftArrow)) {
+		if (Input.GetKey(KeyCode.LeftArrow) & !(Input.GetKey(KeyCode.RightArrow))) {
 			circleIndex -= Mathf.PI/50f;
 			rotateLeft = true;
 			//if(circleIndex < 0) {
 			//	circleIndex += 360;
 			//}
 		}
-		if (Input.GetKey(KeyCode.RightArrow)) {
+		if ((Input.GetKey(KeyCode.RightArrow)) & !(Input.GetKey(KeyCode.LeftArrow))) {
 			circleIndex += Mathf.PI/50f;
 			rotateRight = true;
 			//if(circleIndex > 360) {

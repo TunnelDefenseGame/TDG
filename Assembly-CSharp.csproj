@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{23BE9CA4-5F29-B212-2A3E-ECFFCB0918FE}</ProjectGuid>
+    <ProjectGuid>{5E78F492-8A0C-BDD8-2704-08D38A444749}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,7 +57,7 @@
      <None Include="Assets\StarNestSkybox\StarNestSkybox.shader" />
      <None Include="Assets\StarNestSkybox\StarNest.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>/Users/Naugle/Documents/Unity/Tunnel_Defense_Game_2D/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>/Users/Naugle/Documents/Unity/TDG/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{BB4D81B3-F870-2EAD-B461-98CED501CD4B}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{AFB8853B-31C3-05D8-C21F-5D89350A9ADF}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
