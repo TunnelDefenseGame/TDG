@@ -5,6 +5,8 @@ Project("{99F11D34-7F06-D2F3-458C-5EA33647E1BC}") = "TDG", "Assembly-CSharp-firs
 EndProject
 Project("{99F11D34-7F06-D2F3-458C-5EA33647E1BC}") = "TDG", "Assembly-CSharp.csproj", "{5E78F492-8A0C-BDD8-2704-08D38A444749}"
 EndProject
+Project("{99F11D34-7F06-D2F3-458C-5EA33647E1BC}") = "TDG", "Assembly-CSharp-Editor.csproj", "{F3C65673-0FD4-491A-924D-EEC7FD4E594F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{5E78F492-8A0C-BDD8-2704-08D38A444749}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E78F492-8A0C-BDD8-2704-08D38A444749}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E78F492-8A0C-BDD8-2704-08D38A444749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3C65673-0FD4-491A-924D-EEC7FD4E594F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C65673-0FD4-491A-924D-EEC7FD4E594F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C65673-0FD4-491A-924D-EEC7FD4E594F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C65673-0FD4-491A-924D-EEC7FD4E594F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
