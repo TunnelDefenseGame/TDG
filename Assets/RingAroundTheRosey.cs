@@ -3,9 +3,11 @@ using System.Collections;
 
 public class RingAroundTheRosey : MonoBehaviour {
 
+	Transform Ship_2;
+	public GameObject m_shotPrefab;
 	float timeCounter = 0;
 	Vector3 startPos;
-	Vector3 tunnelPos;
+	//Vector3 tunnelPos;
 	float startX;
 	float startY;
 	float startZ;
@@ -18,7 +20,7 @@ public class RingAroundTheRosey : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		startPos = GameObject.Find("Ship_2").transform.position;
-		tunnelPos = GameObject.Find("Updatedv3tunnel").transform.position;
+		//tunnelPos = GameObject.Find("Updatedv3tunnel").transform.position;
 
 		startX = startPos.x;
 		startY = startPos.y;
@@ -41,6 +43,10 @@ public class RingAroundTheRosey : MonoBehaviour {
 			//	circleIndex -= 360;
 			//}
 		}
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			GameObject go = GameObject.Instantiate(m_shotPrefab, transform.position, transform.rotation) as GameObject;
+			GameObject.Destroy(go, 3f);
+		}
 
 
 		timeCounter += Time.deltaTime;
@@ -60,5 +66,4 @@ public class RingAroundTheRosey : MonoBehaviour {
 		}
 	}
 
-	
 }
