@@ -10,7 +10,7 @@ public class ShotBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position += transform.forward * Time.deltaTime * 1000f;
-	
+		transform.position += transform.forward * Time.deltaTime * 3f;
+		//transform.position.y += Time.deltaTime * 3f;
 	}
 }
