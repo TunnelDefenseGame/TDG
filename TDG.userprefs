@@ -1,10 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RingAroundTheRosey.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/VolumetricLines/ExampleScenes/ExampleScripts/ShotBehavior.cs">
     <Files>
-      <File FileName="Assets/VolumetricLines/ExampleScenes/ExampleScripts/CannonBehavior.cs" Line="35" Column="2" />
-      <File FileName="Assets/RingAroundTheRosey.cs" Line="47" Column="86" />
-      <File FileName="Assets/VolumetricLines/Scripts/VolumetricLineBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets/VolumetricLines/Scripts/VolumetricLineBehavior.cs" Line="255" Column="17" />
+      <File FileName="Assets/VolumetricLines/ExampleScenes/ExampleScripts/CannonBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets/RingAroundTheRosey.cs" Line="1" Column="1" />
+      <File FileName="Assets/VolumetricLines/ExampleScenes/ExampleScripts/ShotBehavior.cs" Line="13" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
