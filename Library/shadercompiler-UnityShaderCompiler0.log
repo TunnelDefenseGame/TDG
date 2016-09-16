@@ -1,2 +1,38 @@
 Base path: /Applications/Unity/Unity.app/Contents
 Cmd: getPlatforms
+Cmd: preprocess
+  insize=5796 outsize=2269 ok=1
+Cmd: preprocess
+  insize=3019 outsize=1285 ok=1
+Cmd: preprocess
+  insize=9919 outsize=770 ok=1
+Cmd: compileSnippet
+  error: 2 plat 15 at (54): incorrect number of arguments to numeric-type constructor\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP
+  api=15 type=0 insize=4949 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=0
+Cmd: preprocess
+  insize=4355 outsize=1355 ok=1
+Cmd: preprocess
+  insize=6235 outsize=2549 ok=1
+Cmd: preprocess
+  insize=3381 outsize=1368 ok=1
+Cmd: preprocess
+  insize=5044 outsize=3437 ok=1
+Cmd: preprocess
+  insize=3049 outsize=1316 ok=1
+Cmd: preprocess
+  insize=3390 outsize=1392 ok=1
+Cmd: preprocess
+  insize=4332 outsize=1332 ok=1
+Cmd: preprocess
+  insize=6803 outsize=2258 ok=1
+Cmd: preprocess
+  insize=3063 outsize=1767 ok=1
+Cmd: compileSnippet
+  api=15 type=0 insize=965 outsize=12711 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
+Cmd: compileSnippet
+  api=15 type=1 insize=965 outsize=0 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
+Cmd: compileSnippet
+  api=15 type=0 insize=923 outsize=7250 kw=DIRECTIONAL SHADOWS_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
+Cmd: compileSnippet
+  api=15 type=1 insize=923 outsize=0 kw=DIRECTIONAL SHADOWS_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP ok=1
