@@ -17,4 +17,11 @@ public class EnemyBehaviour : MonoBehaviour {
 			Destroy (gameObject, 10);
 		}
 	}
+
+	void OnCollisionEnter (Collision col) {
+		Destroy (col.gameObject);
+		Destroy (this.gameObject);
+		//print ("Collision detected");
+
+	}
 }

@@ -6,13 +6,13 @@ function Update()
    if (Input.GetKeyDown ("k")) 
    { 
 	   var rt = new RenderTexture(resWidth, resHeight, 24);    
-	   camera.targetTexture = rt; 
+	   GetComponent.<Camera>().targetTexture = rt; 
 	   var screenShot = new Texture2D(resWidth, resHeight, TextureFormat.RGB24, false); 
-	   camera.Render(); 
+	   GetComponent.<Camera>().Render(); 
 	   RenderTexture.active = rt;
 	   screenShot.ReadPixels(Rect(0, 0, resWidth, resHeight), 0, 0); 
 	   RenderTexture.active = null; // JC: added to avoid errors 
-	   camera.targetTexture = null;
+	   GetComponent.<Camera>().targetTexture = null;
 	   Destroy(rt);
 	   var bytes = screenShot.EncodeToPNG(); 
 	   System.IO.File.WriteAllBytes(Application.dataPath + "/screenshots/screen" + System.DateTime.Now.ToString("dd-MM-yyyy_HH-mm-ss") + ".png", bytes); 
