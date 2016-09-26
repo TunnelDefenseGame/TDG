@@ -19,7 +19,7 @@ public class EnemyManager : MonoBehaviour {
 
 	void Spawn () {
 
-		int spawnPointIndex = Random.Range (0, spawnPoints.Length-1);
+		int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 
 		Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
 	

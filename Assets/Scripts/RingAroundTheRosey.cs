@@ -11,7 +11,7 @@ public class RingAroundTheRosey : MonoBehaviour {
 	float startX;
 	float startY;
 	float startZ;
-	float ratio = 0.675f;
+	float ratio = 0.75f;
 	float circleIndex = 3*Mathf.PI/2;
 	float rotationAmount = 180/50f;
 	bool rotateLeft = false;
@@ -44,7 +44,7 @@ public class RingAroundTheRosey : MonoBehaviour {
 			//}
 		}
 		if (Input.GetKeyDown(KeyCode.Space)) {
-			GameObject go = GameObject.Instantiate(m_shotPrefab, transform.position, transform.rotation) as GameObject;
+			GameObject go = GameObject.Instantiate(m_shotPrefab, transform.position, Quaternion.identity) as GameObject;
 			GameObject.Destroy(go, 3f);
 		}
 
