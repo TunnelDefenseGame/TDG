@@ -8,11 +8,13 @@ public class RingAroundTheRosey : MonoBehaviour {
 	public GameObject m_shotPrefab;
 
 
-	//public Slider heatSlider; 
+	public Slider heatSlider; 
+	public Image Fill;
 	public float maxGunHeat;
 	private float currentGunHeat;
 	public float coolDownAmount;
 	private bool isOverHeated = false;
+
 
 	public float cooledDown;
 
@@ -76,8 +78,11 @@ public class RingAroundTheRosey : MonoBehaviour {
 			isOverHeated = false;
 		}
 
-		print (currentGunHeat);
-		//heatSlider.value = currentGunHeat;
+		//heatSlider.value = val;
+		Fill.color = Color.Lerp (Color.blue, Color.red, currentGunHeat / maxGunHeat);
+
+		//print (currentGunHeat);
+		heatSlider.value = currentGunHeat;
 
 		timeCounter += Time.deltaTime;
 		float x = ratio * (Mathf.Cos (circleIndex)) + startX;
@@ -95,5 +100,4 @@ public class RingAroundTheRosey : MonoBehaviour {
 			rotateRight = false;
 		}
 	}
-
 }
