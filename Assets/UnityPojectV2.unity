@@ -580,6 +580,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_shotPrefab: {fileID: 163672, guid: 65def84363c0d42ea87b30bc374cf9a8, type: 2}
+  maxGunHeat: 5
+  coolDownAmount: 0.02
+  cooledDown: 3
 --- !u!4 &623198655
 Transform:
   m_ObjectHideFlags: 0

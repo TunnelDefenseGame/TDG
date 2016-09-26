@@ -1,10 +1,21 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class RingAroundTheRosey : MonoBehaviour {
 
 	Transform Ship_2;
 	public GameObject m_shotPrefab;
+
+
+	//public Slider heatSlider; 
+	public float maxGunHeat;
+	private float currentGunHeat;
+	public float coolDownAmount;
+	private bool isOverHeated = false;
+
+	public float cooledDown;
+
 	float timeCounter = 0;
 	Vector3 startPos;
 	//Vector3 tunnelPos;
@@ -43,11 +54,30 @@ public class RingAroundTheRosey : MonoBehaviour {
 			//	circleIndex -= 360;
 			//}
 		}
-		if (Input.GetKeyDown(KeyCode.Space)) {
+		if (Input.GetKeyDown(KeyCode.Space) && isOverHeated == false) {
 			GameObject go = GameObject.Instantiate(m_shotPrefab, transform.position, Quaternion.identity) as GameObject;
 			GameObject.Destroy(go, 3f);
+
+			//increase the heat of the gun and check to see if it is overheated
+			currentGunHeat += 1.0f;
+
+			if (currentGunHeat >= maxGunHeat) {
+				isOverHeated = true;
+			}
+		}
+		//take away the cooldown amount, should be less than what is added to it for each shot
+		if (currentGunHeat > 0f) {
+			currentGunHeat -= coolDownAmount;
+		} else {
+			currentGunHeat = 0f;
+		}
+		//check to see if the gun has cooled down enough to use again
+		if ((isOverHeated) && currentGunHeat <= cooledDown) {
+			isOverHeated = false;
 		}
 
+		print (currentGunHeat);
+		//heatSlider.value = currentGunHeat;
 
 		timeCounter += Time.deltaTime;
 		float x = ratio * (Mathf.Cos (circleIndex)) + startX;
