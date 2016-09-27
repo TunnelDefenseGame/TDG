@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class EnemyBehaviour : MonoBehaviour {
@@ -7,6 +8,7 @@ public class EnemyBehaviour : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//score = 0;
 		front = new Vector3 (0, 0, -1);
 	}
 	
@@ -21,7 +23,8 @@ public class EnemyBehaviour : MonoBehaviour {
 	void OnCollisionEnter (Collision col) {
 		Destroy (col.gameObject);
 		Destroy (this.gameObject);
-		//print ("Collision detected");
-
+		EnemyManager.score++;
 	}
+
+
 }
