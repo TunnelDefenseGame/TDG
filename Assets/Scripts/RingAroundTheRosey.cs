@@ -24,6 +24,9 @@ public class RingAroundTheRosey : MonoBehaviour {
 	float startX;
 	float startY;
 	float startZ;
+	float x;
+	float y;
+	float z;
 	float ratio = 0.75f;
 	float circleIndex = 3*Mathf.PI/2;
 	float rotationAmount = 180/50f;
@@ -42,6 +45,19 @@ public class RingAroundTheRosey : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		moveAndRotate ();
+
+		shoot ();
+
+		coolDown ();
+
+		updateSlider ();
+
+	}
+
+	void moveAndRotate () {
+		
 		if (Input.GetKey(KeyCode.LeftArrow) & !(Input.GetKey(KeyCode.RightArrow))) {
 			circleIndex -= Mathf.PI/50f;
 			rotateLeft = true;
@@ -56,38 +72,11 @@ public class RingAroundTheRosey : MonoBehaviour {
 			//	circleIndex -= 360;
 			//}
 		}
-		if (Input.GetKeyDown(KeyCode.Space) && isOverHeated == false) {
-			GameObject go = GameObject.Instantiate(m_shotPrefab, transform.position, Quaternion.identity) as GameObject;
-			GameObject.Destroy(go, 3f);
-
-			//increase the heat of the gun and check to see if it is overheated
-			currentGunHeat += 1.0f;
-
-			if (currentGunHeat >= maxGunHeat) {
-				isOverHeated = true;
-			}
-		}
-		//take away the cooldown amount, should be less than what is added to it for each shot
-		if (currentGunHeat > 0f) {
-			currentGunHeat -= coolDownAmount;
-		} else {
-			currentGunHeat = 0f;
-		}
-		//check to see if the gun has cooled down enough to use again
-		if ((isOverHeated) && currentGunHeat <= cooledDown) {
-			isOverHeated = false;
-		}
-
-		//heatSlider.value = val;
-		Fill.color = Color.Lerp (Color.blue, Color.red, currentGunHeat / maxGunHeat);
-
-		//print (currentGunHeat);
-		heatSlider.value = currentGunHeat;
 
 		timeCounter += Time.deltaTime;
-		float x = ratio * (Mathf.Cos (circleIndex)) + startX;
-		float y = ratio * (Mathf.Sin (circleIndex)) + startY + ratio;
-		float z = startZ;
+		x = ratio * (Mathf.Cos (circleIndex)) + startX;
+		y = ratio * (Mathf.Sin (circleIndex)) + startY + ratio;
+		z = startZ;
 		transform.position = new Vector3 (x, y, z);
 
 		if (rotateLeft) {
@@ -99,5 +88,42 @@ public class RingAroundTheRosey : MonoBehaviour {
 			rotateLeft = false;
 			rotateRight = false;
 		}
+	}
+
+
+	void shoot () {
+		if (Input.GetKeyDown(KeyCode.Space) && isOverHeated == false) {
+			GameObject go = GameObject.Instantiate(m_shotPrefab, transform.position, Quaternion.identity) as GameObject;
+			GameObject.Destroy(go, 3f);
+
+			//increase the heat of the gun and check to see if it is overheated
+			currentGunHeat += 1.0f;
+
+			if (currentGunHeat >= maxGunHeat) {
+				isOverHeated = true;
+			}
+		}
+	}
+
+
+	void coolDown () {
+		//take away the cooldown amount, should be less than what is added to it for each shot
+		if (currentGunHeat > 0f) {
+			currentGunHeat -= coolDownAmount;
+		} else {
+			currentGunHeat = 0f;
+		}
+		//check to see if the gun has cooled down enough to use again
+		if ((isOverHeated) && currentGunHeat <= cooledDown) {
+			isOverHeated = false;
+		}
+	}
+
+	void updateSlider () {
+		//heatSlider.value = val;
+		Fill.color = Color.Lerp (Color.blue, Color.red, currentGunHeat / maxGunHeat);
+
+		//print (currentGunHeat);
+		heatSlider.value = currentGunHeat;
 	}
 }
