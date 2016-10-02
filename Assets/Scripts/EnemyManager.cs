@@ -38,18 +38,34 @@ public class EnemyManager : MonoBehaviour {
 	IEnumerator Spawn () {
 		
 
-
+		//if the game is still going, keep spawning enemies
 		while (SpawnerEnabled) {
+
+			//pick a random number between 0 and the number of spawn locations
 			int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 
 			timer += Time.deltaTime;
 			if (timer >= SpawnInterval) {
+
+				//spawn an enemy at one of the random locations
 				Instantiate (enemy, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
-			
+
+				//wait
 				yield return new WaitForSeconds(SpawnInterval);
+
+				//reset the timer
 				timer = 0;
+
+				//increase the speed of the spawning of enemies over time.
 				if (SpawnInterval > 1.0f) {
 					SpawnInterval -= Mathf.Sqrt (Time.deltaTime);
+				} else if (SpawnInterval < 1.0f) {
+					SpawnInterval = 1.0f;
+				}
+
+				//increase the speed of the enemies over time
+				if (EnemyBehaviour.getEnemySpeed() < 3.0f) {
+					EnemyBehaviour.setEnemySpeed (Mathf.Sqrt (Time.deltaTime));
 				}
 			}
 		}
