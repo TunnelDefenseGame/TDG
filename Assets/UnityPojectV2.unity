@@ -1918,7 +1918,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1465052552}
-  m_LocalRotation: {x: 0.030184139, y: 0.25556946, z: -0.82241046, w: 0.50736016}
+  m_LocalRotation: {x: 0.030184135, y: 0.25556943, z: -0.82241035, w: 0.5073601}
   m_LocalPosition: {x: -4.16, y: 3.85, z: -26.96}
   m_LocalScale: {x: 1.0000007, y: 1, z: 1.0000007}
   m_LocalEulerAnglesHint: {x: 26.784, y: 13.287001, z: -113.19}
@@ -2734,7 +2734,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnerEnabled: 1
-  SpawnInterval: 2
+  startSpawnInterval: 3
+  endSpawnInterval: 1
+  maxEnemySpeed: 3
   enemy: {fileID: 924430061}
   spawnTime: 2
   spawnPoints:

@@ -20,14 +20,10 @@ public class EnemyBehaviour : MonoBehaviour {
 		if (gameObject.name == "Enemy(Clone)") {
 			Destroy (gameObject, 10);
 		}
-		print (enemySpeed);
 	}
 
-	public static void setEnemySpeed (float increase) {
-		enemySpeed += increase;
-		if (enemySpeed > 3.0f) {
-			enemySpeed = 3.0f;
-		}
+	public static void setEnemySpeed (float newEnemySpeed) {
+		enemySpeed  = newEnemySpeed;
 	}
 
 	public static float getEnemySpeed () {
