@@ -4,12 +4,14 @@ using System.Collections;
 
 public class EnemyBehaviour : MonoBehaviour {
 
+	public static float enemySpeed = 1;
+
 	Vector3 front;
 
 	// Use this for initialization
 	void Start () {
 		//score = 0;
-		front = new Vector3 (0, 0, -1);
+		front = new Vector3 (0, 0, -enemySpeed);
 	}
 	
 	// Update is called once per frame
@@ -18,6 +20,14 @@ public class EnemyBehaviour : MonoBehaviour {
 		if (gameObject.name == "Enemy(Clone)") {
 			Destroy (gameObject, 10);
 		}
+	}
+
+	public static void setEnemySpeed (float newEnemySpeed) {
+		enemySpeed  = newEnemySpeed;
+	}
+
+	public static float getEnemySpeed () {
+		return enemySpeed;
 	}
 
 	void OnCollisionEnter (Collision col) {
