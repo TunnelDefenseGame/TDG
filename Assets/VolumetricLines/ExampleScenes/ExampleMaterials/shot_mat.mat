@@ -15,28 +15,23 @@ Material:
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-      data:
-        first:
-          name: _LineWidth
-        second: 64
-      data:
-        first:
-          name: _LineScale
-        second: 1
-      data:
-        first:
-          name: _LightSaberFactor
-        second: 0.46428573
+    - first:
+        name: _LightSaberFactor
+      second: 0.46428573
+    - first:
+        name: _LineScale
+      second: 1
+    - first:
+        name: _LineWidth
+      second: 64
     m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 0, b: 0, a: 1}
+    - first:
+        name: _Color
+      second: {r: 0, g: 0, b: 0.73333335, a: 1}
