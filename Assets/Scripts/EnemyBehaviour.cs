@@ -6,6 +6,8 @@ public class EnemyBehaviour : MonoBehaviour {
 
 	public static float enemySpeed = 1;
 
+	public GameObject explosion;
+
 	Vector3 front;
 
 	// Use this for initialization
@@ -33,6 +35,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	void OnCollisionEnter (Collision col) {
 		Destroy (col.gameObject);
 		Destroy (this.gameObject);
+		Instantiate(explosion, this.transform.position,this.transform.rotation);
 		EnemyManager.score++;
 	}
 
