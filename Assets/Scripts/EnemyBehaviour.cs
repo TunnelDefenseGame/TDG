@@ -6,7 +6,7 @@ public class EnemyBehaviour : MonoBehaviour {
 
 	public static float enemySpeed = 1;
 
-	public GameObject explosion;
+	public GameObject[] explosion;
 
 	Vector3 front;
 
@@ -35,7 +35,11 @@ public class EnemyBehaviour : MonoBehaviour {
 	void OnCollisionEnter (Collision col) {
 		Destroy (col.gameObject);
 		Destroy (this.gameObject);
-		Instantiate(explosion, this.transform.position,this.transform.rotation);
+
+		//choose a random explosion to play when the enemy blows up
+		int explosionIndex = Random.Range (0, explosion.Length);
+
+		Instantiate(explosion[explosionIndex], this.transform.position,this.transform.rotation);
 		//explosion.
 		EnemyManager.score++;
 	}
