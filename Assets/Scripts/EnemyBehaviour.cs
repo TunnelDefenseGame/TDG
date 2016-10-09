@@ -36,6 +36,7 @@ public class EnemyBehaviour : MonoBehaviour {
 		Destroy (col.gameObject);
 		Destroy (this.gameObject);
 		Instantiate(explosion, this.transform.position,this.transform.rotation);
+		//explosion.
 		EnemyManager.score++;
 	}
 
