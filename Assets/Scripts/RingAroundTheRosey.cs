@@ -7,6 +7,8 @@ public class RingAroundTheRosey : MonoBehaviour {
 	Transform Ship_2;
 	public GameObject m_shotPrefab;
 
+	//are any of the arrow keys being held down?
+	private bool keydown = false;
 
 	public Slider heatSlider; 
 	public Image Fill;
@@ -15,6 +17,11 @@ public class RingAroundTheRosey : MonoBehaviour {
 	public float coolDownAmount;
 	private bool isOverHeated = false;
 
+	public Transform[] playerPoints;
+	private int currentIndex = 0;
+
+	//speed of the moving from point to point
+	public float speed;
 
 	public float cooledDown;
 
@@ -41,6 +48,9 @@ public class RingAroundTheRosey : MonoBehaviour {
 		startX = startPos.x;
 		startY = startPos.y;
 		startZ = startPos.z;
+
+		transform.position = playerPoints [currentIndex].position;
+		transform.rotation = playerPoints [currentIndex].rotation;
 	}
 	
 	// Update is called once per frame
@@ -57,31 +67,56 @@ public class RingAroundTheRosey : MonoBehaviour {
 	}
 
 	void moveAndRotate () {
-		
-		if (Input.GetKey(KeyCode.LeftArrow) & !(Input.GetKey(KeyCode.RightArrow))) {
+
+		float step = speed * Time.deltaTime;
+
+		if (Input.GetKey(KeyCode.LeftArrow) & !(Input.GetKey(KeyCode.RightArrow)) & (keydown == false)) {
 			circleIndex -= Mathf.PI/50f;
 			rotateLeft = true;
+			keydown = true;
 		}
-		if ((Input.GetKey(KeyCode.RightArrow)) & !(Input.GetKey(KeyCode.LeftArrow))) {
+		if ((Input.GetKey(KeyCode.RightArrow)) & !(Input.GetKey(KeyCode.LeftArrow)) & (keydown == false)) {
 			circleIndex += Mathf.PI/50f;
 			rotateRight = true;
+			keydown = true;
+		}
+		if (!(Input.GetKey(KeyCode.RightArrow)) & !(Input.GetKey(KeyCode.LeftArrow))) {
+			keydown = false;
 		}
 
 		timeCounter += Time.deltaTime;
 		x = ratio * (Mathf.Cos (circleIndex)) + startX;
 		y = ratio * (Mathf.Sin (circleIndex)) + startY + ratio;
 		z = startZ;
-		transform.position = new Vector3 (x, y, z);
+		//transform.position = new Vector3 (x, y, z);
 
 		if (rotateLeft) {
-			transform.Rotate(new Vector3(0, 0, -rotationAmount), Space.World);
+			//transform.Rotate(new Vector3(0, 0, -rotationAmount), Space.World);
+			currentIndex--;
+			if (currentIndex == -1) {
+				currentIndex = playerPoints.Length - 1;
+			}
+			//transform.position = playerPoints [currentIndex].position;
+			//transform.rotation = playerPoints [currentIndex].rotation;
+			//transform.position = Vector3.MoveTowards(transform.position, playerPoints [currentIndex].position, step);
 			rotateLeft = false;
 			rotateRight = false;
+		
 		} else if (rotateRight) {
-			transform.Rotate(new Vector3(0, 0, rotationAmount), Space.World);
+			//transform.Rotate(new Vector3(0, 0, rotationAmount), Space.World);
+			currentIndex++;
+			if (currentIndex == playerPoints.Length) {
+				currentIndex = 0;
+			}
+			//transform.position = playerPoints [currentIndex].position;
+			//transform.rotation = playerPoints [currentIndex].rotation;
+			//transform.position = Vector3.MoveTowards(transform.position, playerPoints [currentIndex].position, step);
+
 			rotateLeft = false;
 			rotateRight = false;
 		}
+		transform.position = Vector3.MoveTowards(transform.position, playerPoints [currentIndex].position, step);
+
 	}
 
 

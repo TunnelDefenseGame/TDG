@@ -1082,6 +1082,14 @@ MonoBehaviour:
   Fill: {fileID: 1104216082}
   maxGunHeat: 5
   coolDownAmount: 0.02
+  playerPoints:
+  - {fileID: 975402292}
+  - {fileID: 683784913}
+  - {fileID: 2016187439}
+  - {fileID: 232117244}
+  - {fileID: 56762962}
+  - {fileID: 555627640}
+  speed: 10
   cooledDown: 3
 --- !u!4 &623198655
 Transform:
