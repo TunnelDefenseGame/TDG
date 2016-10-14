@@ -61,16 +61,10 @@ public class RingAroundTheRosey : MonoBehaviour {
 		if (Input.GetKey(KeyCode.LeftArrow) & !(Input.GetKey(KeyCode.RightArrow))) {
 			circleIndex -= Mathf.PI/50f;
 			rotateLeft = true;
-			//if(circleIndex < 0) {
-			//	circleIndex += 360;
-			//}
 		}
 		if ((Input.GetKey(KeyCode.RightArrow)) & !(Input.GetKey(KeyCode.LeftArrow))) {
 			circleIndex += Mathf.PI/50f;
 			rotateRight = true;
-			//if(circleIndex > 360) {
-			//	circleIndex -= 360;
-			//}
 		}
 
 		timeCounter += Time.deltaTime;
