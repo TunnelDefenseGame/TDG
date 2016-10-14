@@ -79,6 +79,16 @@
     <Compile Include="Assets\Scripts\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\RingAroundTheRosey.cs" />
     <Compile Include="Assets\Scripts\TunnelBehavior.cs" />
+    <Compile Include="Assets\Tempt\Done_BGScroller.cs" />
+    <Compile Include="Assets\Tempt\Done_DestroyByBoundary.cs" />
+    <Compile Include="Assets\Tempt\Done_DestroyByContact.cs" />
+    <Compile Include="Assets\Tempt\Done_DestroyByTime.cs" />
+    <Compile Include="Assets\Tempt\Done_EvasiveManeuver.cs" />
+    <Compile Include="Assets\Tempt\Done_GameController.cs" />
+    <Compile Include="Assets\Tempt\Done_Mover.cs" />
+    <Compile Include="Assets\Tempt\Done_PlayerController.cs" />
+    <Compile Include="Assets\Tempt\Done_RandomRotator.cs" />
+    <Compile Include="Assets\Tempt\Done_WeaponController.cs" />
     <Compile Include="Assets\VolumetricLines\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
     <Compile Include="Assets\VolumetricLines\ExampleScenes\ExampleScripts\CreateSinShapedLineStrip.cs" />
     <Compile Include="Assets\VolumetricLines\ExampleScenes\ExampleScripts\ShotBehavior.cs" />
