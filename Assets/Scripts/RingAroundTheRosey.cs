@@ -116,7 +116,7 @@ public class RingAroundTheRosey : MonoBehaviour {
 			rotateRight = false;
 		}
 		transform.position = Vector3.MoveTowards(transform.position, playerPoints [currentIndex].position, step);
-
+		transform.rotation = Quaternion.Slerp(transform.rotation, playerPoints [currentIndex].rotation, step * 2);
 	}
 
 
