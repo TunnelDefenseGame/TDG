@@ -181,6 +181,10 @@ Prefab:
       propertyPath: m_Name
       value: Tunnel001
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a852924ab873f284b8c9380b79d0619c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a852924ab873f284b8c9380b79d0619c, type: 3}
   m_IsPrefabParent: 0
@@ -997,6 +1001,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c198a058ba5c54d21b2ecdefeb0b2bc9, type: 2}
+    - target: {fileID: 400000, guid: a852924ab873f284b8c9380b79d0619c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a852924ab873f284b8c9380b79d0619c, type: 3}
   m_IsPrefabParent: 0
@@ -1047,6 +1055,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b0fccc8e77c6042a696238efe70d6298, type: 2}
+    - target: {fileID: 100000, guid: a852924ab873f284b8c9380b79d0619c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a852924ab873f284b8c9380b79d0619c, type: 3}
   m_IsPrefabParent: 0
@@ -3584,6 +3596,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b297536f2d064475f90f9e211f49d837, type: 2}
+    - target: {fileID: 100000, guid: a852924ab873f284b8c9380b79d0619c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a852924ab873f284b8c9380b79d0619c, type: 3}
   m_IsPrefabParent: 0
@@ -3767,7 +3783,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1465052552}
-  m_LocalRotation: {x: 0.030184135, y: 0.25556943, z: -0.82241035, w: 0.5073601}
+  m_LocalRotation: {x: 0.030184139, y: 0.25556946, z: -0.82241046, w: 0.50736016}
   m_LocalPosition: {x: -4.16, y: 3.85, z: -26.96}
   m_LocalScale: {x: 1.0000007, y: 1, z: 1.0000007}
   m_LocalEulerAnglesHint: {x: 26.784, y: 13.287001, z: -113.19}
@@ -4595,6 +4611,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4092d790d908c488aa747114493dafdd, type: 2}
+    - target: {fileID: 100000, guid: a852924ab873f284b8c9380b79d0619c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a852924ab873f284b8c9380b79d0619c, type: 3}
   m_IsPrefabParent: 0
