@@ -537,7 +537,7 @@ PlayerSettings:
   XboxOne::VR::enabledDevices: []
   iOS::VR::enabledDevices: []
   tvOS::VR::enabledDevices: []
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: c546a996-7d13-4c5b-961e-fe39d21ed05a
+  projectName: TDG
+  organizationId: str8xlnasty
   cloudEnabled: 0
