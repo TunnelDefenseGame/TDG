@@ -155,4 +155,10 @@ public class RingAroundTheRosey : MonoBehaviour {
 		//print (currentGunHeat);
 		heatSlider.value = currentGunHeat;
 	}
+
+
+
+	public int getPositionIndex () {
+		return currentIndex;
+	}
 }
