@@ -4,6 +4,7 @@ using System.Collections;
 public class ShotBehavior : MonoBehaviour {
 
 	Vector3 front;
+	public float speed;
 	//float xx;
 	//float yy;
 	//float zz;
@@ -19,7 +20,7 @@ public class ShotBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		transform.position += front * Time.deltaTime * 3f;
+		transform.position += front * Time.deltaTime * speed;
 		//transform.position.y += Time.deltaTime * 3f;
 	}
 }
