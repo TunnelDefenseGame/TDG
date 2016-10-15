@@ -42,7 +42,7 @@ public class RingAroundTheRosey : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		startPos = GameObject.Find("Ship_2").transform.position;
+		startPos = GameObject.Find("nave").transform.position;
 		//tunnelPos = GameObject.Find("Updatedv3tunnel").transform.position;
 
 		startX = startPos.x;
