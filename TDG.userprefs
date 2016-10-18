@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ShotBehavior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/RingAroundTheRosey.cs">
     <Files>
-      <File FileName="Assets/Scripts/CameraBehavior.cs" Line="13" Column="2" />
-      <File FileName="Assets/Scripts/RingAroundTheRosey.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyBehaviour.cs" Line="39" Column="5" />
+      <File FileName="Assets/Scripts/RingAroundTheRosey.cs" Line="84" Column="6" />
+      <File FileName="Assets/Scripts/CameraBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnemyBehaviour.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/EnemyManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/CameraFollow.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/ShotBehavior.cs" Line="1" Column="1" />

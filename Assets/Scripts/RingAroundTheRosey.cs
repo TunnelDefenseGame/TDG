@@ -81,7 +81,7 @@ public class RingAroundTheRosey : MonoBehaviour {
 			if (Input.GetTouch (0).phase == TouchPhase.Ended) {
 				print ("touch ended");
 			}
-
+			//if (Input.GetTouch (0).
 		}
 
 
