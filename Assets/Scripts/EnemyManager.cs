@@ -14,6 +14,12 @@ public class EnemyManager : MonoBehaviour {
 	public float maxEnemySpeed;
 
 	public GameObject enemy;
+
+	//the particle system to play before an enemy appears
+	public GameObject teleport;
+	//lifetime of the teleport particle system
+	public float teleportLifetime;
+
 	public float spawnTime;
 	public Transform[] spawnPoints;
 
@@ -21,6 +27,8 @@ public class EnemyManager : MonoBehaviour {
 	public Text scoreText;
 
 	private float timer;
+
+	private int spawnPointIndex;
 
 	// Use this for initialization
 	void Start () {
@@ -46,13 +54,19 @@ public class EnemyManager : MonoBehaviour {
 		while (SpawnerEnabled) {
 
 			//pick a random number between 0 and the number of spawn locations
-			int spawnPointIndex = Random.Range (0, spawnPoints.Length);
+			int tempint = Random.Range (0, spawnPoints.Length);
+
+			spawnPointIndex = tempint;
 
 			timer += Time.deltaTime;
 			if (timer >= startSpawnInterval) {
 
-				//spawn an enemy at one of the random locations
-				Instantiate (enemy, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
+				//spawn the particle system, wait, and spawn the ship
+				Invoke ("spawnTeleport", 0);
+				Invoke ("spawnEnemy", teleportLifetime);
+
+
+
 
 				//wait
 				yield return new WaitForSeconds(startSpawnInterval);
@@ -78,6 +92,19 @@ public class EnemyManager : MonoBehaviour {
 			}
 		}
 	}
+
+	void spawnTeleport () {
+		Object tempobj = Instantiate (teleport, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
+		//kill the teleport particle system
+		Destroy (tempobj, teleportLifetime);
+	}
+
+
+	void spawnEnemy () {
+		//spawn an enemy at one of the random locations
+		Instantiate (enemy, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
+	}
+
 
 	//Update the score of the game
 	void setScoreText () {
