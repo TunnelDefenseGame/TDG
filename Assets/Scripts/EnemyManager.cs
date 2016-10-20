@@ -93,13 +93,14 @@ public class EnemyManager : MonoBehaviour {
 		}
 	}
 
+	//spawn the teleport particle system and kill it before the enemy appears
 	void spawnTeleport () {
 		Object tempobj = Instantiate (teleport, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
 		//kill the teleport particle system
 		Destroy (tempobj, teleportLifetime);
 	}
 
-
+	//spawn the enemy ship
 	void spawnEnemy () {
 		//spawn an enemy at one of the random locations
 		Instantiate (enemy, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
