@@ -70,6 +70,21 @@ public class RingAroundTheRosey : MonoBehaviour {
 
 		float step = speed * Time.deltaTime;
 
+		if (Input.touchCount > 0) {
+
+			if (Input.GetTouch (0).phase == TouchPhase.Began) {
+				print ("touch began");
+			}
+			if (Input.GetTouch (0).phase == TouchPhase.Moved) {
+				print ("touch moved");
+			}
+			if (Input.GetTouch (0).phase == TouchPhase.Ended) {
+				print ("touch ended");
+			}
+			//if (Input.GetTouch (0).
+		}
+
+
 		if (Input.GetKey(KeyCode.LeftArrow) & !(Input.GetKey(KeyCode.RightArrow)) & (keydown == false)) {
 			circleIndex -= Mathf.PI/50f;
 			rotateLeft = true;
