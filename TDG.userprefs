@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BackgroundBehavior.cs">
     <Files>
-      <File FileName="Assets/Scripts/EnemyManager.cs" Line="103" Column="24" />
+      <File FileName="Assets/Scripts/BackgroundBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnemyManager.cs" Line="61" Column="28" />
       <File FileName="Assets/Scripts/RingAroundTheRosey.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/CameraBehavior.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/EnemyBehaviour.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/CameraFollow.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ShotBehavior.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
