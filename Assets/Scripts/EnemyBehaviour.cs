@@ -31,15 +31,16 @@ public class EnemyBehaviour : MonoBehaviour {
 		front = new Vector3 (0, 0, -enemySpeed);
 		//set the number to compare later on for power up dropping
 		powerUpNumber = Random.Range (0, powerUpChance);
+
+		//destroy this enemy after a determined time
+		Destroy (this.gameObject, 7);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		transform.position += front * Time.deltaTime * 3f;
-		if (gameObject.name == "Enemy(Clone)") {
-			Destroy (gameObject, 10);
-		}
 	}
+
 
 	public static void setEnemySpeed (float newEnemySpeed) {
 		enemySpeed  = newEnemySpeed;
