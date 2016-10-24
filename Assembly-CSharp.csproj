@@ -111,6 +111,7 @@
      <Compile Include="Assets\Scripts\LazerScripts\Utils\TransformExtensionMethods.cs" />
      <Compile Include="Assets\Scripts\LazerScripts\VolumetricLineBehavior.cs" />
      <Compile Include="Assets\Scripts\LazerScripts\VolumetricLineStripBehavior.cs" />
+     <Compile Include="Assets\Scripts\PowerUpBehavior.cs" />
      <Compile Include="Assets\Scripts\RingAroundTheRosey.cs" />
      <Compile Include="Assets\Scripts\TunnelBehavior.cs" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
