@@ -17,6 +17,6 @@ public class PowerUpBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		transform.position += front * Time.deltaTime * 3f;
-		Destroy (this, 10);
+		Destroy (this.gameObject, 10);
 	}
 }
