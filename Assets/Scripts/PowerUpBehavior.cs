@@ -12,11 +12,11 @@ public class PowerUpBehavior : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		front = new Vector3 (0, 0, -speed);
+		Destroy (this.gameObject, 7);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		transform.position += front * Time.deltaTime * 3f;
-		Destroy (this.gameObject, 10);
 	}
 }
