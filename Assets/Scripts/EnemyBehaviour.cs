@@ -69,7 +69,7 @@ public class EnemyBehaviour : MonoBehaviour {
 
 		if (randomNumber == powerUpNumber) {
 			powerUpIndex = Random.Range (0, powerUps.Length);
-			Instantiate (powerUps [powerUpIndex], this.transform.position, this.transform.rotation);
+			Instantiate (powerUps [powerUpIndex], this.transform.position, powerUps[powerUpIndex].transform.rotation);
 		}
 	}
 }
