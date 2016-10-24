@@ -19,4 +19,8 @@ public class PowerUpBehavior : MonoBehaviour {
 	void Update () {
 		transform.position += front * Time.deltaTime * 3f;
 	}
+
+	void OnCollisionEnter (Collision col) {
+		Destroy (this.gameObject);
+	}
 }
