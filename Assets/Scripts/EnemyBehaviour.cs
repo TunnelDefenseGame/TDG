@@ -51,7 +51,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	void OnCollisionEnter (Collision col) {
-		Destroy (col.gameObject);
+		//Destroy (col.gameObject);
 		Destroy (this.gameObject);
 
 		//choose a random explosion to play when the enemy blows up

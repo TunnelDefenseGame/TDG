@@ -23,4 +23,9 @@ public class ShotBehavior : MonoBehaviour {
 		transform.position += front * Time.deltaTime * speed;
 		//transform.position.y += Time.deltaTime * 3f;
 	}
+
+	void OnCollisionEnter (Collision col) {
+		//Destroy (col.gameObject);
+		Destroy (this.gameObject);
+	}
 }
