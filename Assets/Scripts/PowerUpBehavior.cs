@@ -21,6 +21,8 @@ public class PowerUpBehavior : MonoBehaviour {
 	}
 
 	void OnCollisionEnter (Collision col) {
-		Destroy (this.gameObject);
+		if (col.gameObject == GameObject.Find ("Player")) {
+			Destroy (this.gameObject);
+		}
 	}
 }
