@@ -46,6 +46,8 @@ public class EnemyBehaviour : MonoBehaviour {
 		enemySpeed  = newEnemySpeed;
 	}
 
+
+
 	public static float getEnemySpeed () {
 		return enemySpeed;
 	}

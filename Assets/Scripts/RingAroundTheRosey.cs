@@ -26,31 +26,20 @@ public class RingAroundTheRosey : MonoBehaviour {
 	public float cooledDown;
 
 	float timeCounter = 0;
-	Vector3 startPos;
-	//Vector3 tunnelPos;
-	float startX;
-	float startY;
-	float startZ;
-	float x;
-	float y;
-	float z;
-	float ratio = 0.75f;
 	float circleIndex = 3*Mathf.PI/2;
-	float rotationAmount = 180/50f;
 	bool rotateLeft = false;
 	bool rotateRight = false;
 
+	//the string that lets ActivePowerUp know what to do
+	private static string activePowerUp;
+
 	// Use this for initialization
 	void Start () {
-		startPos = GameObject.Find("nave").transform.position;
-		//tunnelPos = GameObject.Find("Updatedv3tunnel").transform.position;
-
-		startX = startPos.x;
-		startY = startPos.y;
-		startZ = startPos.z;
 
 		transform.position = playerPoints [currentIndex].position;
 		transform.rotation = playerPoints [currentIndex].rotation;
+
+		activePowerUp = "";
 	}
 	
 	// Update is called once per frame
@@ -100,9 +89,6 @@ public class RingAroundTheRosey : MonoBehaviour {
 		}
 
 		timeCounter += Time.deltaTime;
-		x = ratio * (Mathf.Cos (circleIndex)) + startX;
-		y = ratio * (Mathf.Sin (circleIndex)) + startY + ratio;
-		z = startZ;
 		//transform.position = new Vector3 (x, y, z);
 
 		if (rotateLeft) {
@@ -175,5 +161,15 @@ public class RingAroundTheRosey : MonoBehaviour {
 
 	public int getPositionIndex () {
 		return currentIndex;
+	}
+
+	//when it collides with something
+	void OnCollisionEnter (Collision col) {
+		print ("collision detected with " + col.gameObject);
+		if (col.gameObject.name == "SandClock(Clone)") {
+			activePowerUp = "sandclock";
+			print (activePowerUp);
+			ActivePowerUp.setActivePowerUp (activePowerUp);
+		}
 	}
 }
