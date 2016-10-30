@@ -28,7 +28,6 @@ public class ActivePowerUp : MonoBehaviour {
 				tempSandTime = sandClockTime;
 				activePowerUp = "";
 				//slow down the enemy speed
-				print ("sending active");
 				EnemyManager.setSandClockActive (true);
 
 			}

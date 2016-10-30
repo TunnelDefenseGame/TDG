@@ -101,9 +101,9 @@ public class EnemyManager : MonoBehaviour {
 
 	public static void setSandClockActive (bool active) {
 		if (active) {
-			print ("active");
+			print ("sandClock active");
 		} else {
-			print ("not active");
+			print ("sandClock not active");
 		}
 		sandClockAcive = active;
 	}

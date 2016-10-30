@@ -165,10 +165,8 @@ public class RingAroundTheRosey : MonoBehaviour {
 
 	//when it collides with something
 	void OnCollisionEnter (Collision col) {
-		print ("collision detected with " + col.gameObject);
 		if (col.gameObject.name == "SandClock(Clone)") {
 			activePowerUp = "sandclock";
-			print (activePowerUp);
 			ActivePowerUp.setActivePowerUp (activePowerUp);
 		}
 	}
