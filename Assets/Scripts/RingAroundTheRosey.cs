@@ -6,6 +6,7 @@ public class RingAroundTheRosey : MonoBehaviour {
 
 	Transform Ship_2;
 	public GameObject m_shotPrefab;
+	public GameObject spiritBomb;
 
 	//are any of the arrow keys being held down?
 	private bool keydown = false;
@@ -121,10 +122,24 @@ public class RingAroundTheRosey : MonoBehaviour {
 	}
 
 
+
+
 	void shoot () {
 		if (Input.GetKeyDown(KeyCode.Space) && isOverHeated == false) {
 			GameObject go = GameObject.Instantiate(m_shotPrefab, transform.position, Quaternion.identity) as GameObject;
 			GameObject.Destroy(go, 3f);
+
+			//increase the heat of the gun and check to see if it is overheated
+			currentGunHeat += 1.0f;
+
+			if (currentGunHeat >= maxGunHeat) {
+				isOverHeated = true;
+			}
+		}
+
+		if (Input.GetKeyDown(KeyCode.S) && isOverHeated == false && activePowerUp == "rocket") {
+			GameObject go = GameObject.Instantiate(spiritBomb, transform.position, Quaternion.identity) as GameObject;
+			GameObject.Destroy(go, 10f);
 
 			//increase the heat of the gun and check to see if it is overheated
 			currentGunHeat += 1.0f;
@@ -167,6 +182,11 @@ public class RingAroundTheRosey : MonoBehaviour {
 	void OnCollisionEnter (Collision col) {
 		if (col.gameObject.name == "SandClock(Clone)") {
 			activePowerUp = "sandclock";
+			ActivePowerUp.setActivePowerUp (activePowerUp);
+		} 
+		else if (col.gameObject.name == "Rocket(Clone)") {
+			activePowerUp = "rocket";
+			print ("rocket hit detected");
 			ActivePowerUp.setActivePowerUp (activePowerUp);
 		}
 	}

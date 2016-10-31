@@ -5,6 +5,7 @@ public class ShotBehavior : MonoBehaviour {
 
 	Vector3 front;
 	public float speed;
+	public bool isRegular;
 	//float xx;
 	//float yy;
 	//float zz;
@@ -26,6 +27,8 @@ public class ShotBehavior : MonoBehaviour {
 
 	void OnCollisionEnter (Collision col) {
 		//Destroy (col.gameObject);
-		Destroy (this.gameObject);
+		if (isRegular) {
+			Destroy (this.gameObject);
+		}
 	}
 }
