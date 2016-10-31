@@ -147,6 +147,9 @@ public class RingAroundTheRosey : MonoBehaviour {
 			if (currentGunHeat >= maxGunHeat) {
 				isOverHeated = true;
 			}
+
+			//remove this as active powerUp since it is one use
+			activePowerUp = "";
 		}
 	}
 
