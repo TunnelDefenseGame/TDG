@@ -125,32 +125,29 @@ public class RingAroundTheRosey : MonoBehaviour {
 
 
 	void shoot () {
+		//if user wants to fire a regular shot, fire a regular shot
 		if (Input.GetKeyDown(KeyCode.Space) && isOverHeated == false) {
-			GameObject go = GameObject.Instantiate(m_shotPrefab, transform.position, Quaternion.identity) as GameObject;
-			GameObject.Destroy(go, 3f);
-
-			//increase the heat of the gun and check to see if it is overheated
-			currentGunHeat += 1.0f;
-
-			if (currentGunHeat >= maxGunHeat) {
-				isOverHeated = true;
-			}
+			fireShot (m_shotPrefab, 3f);
 		}
 
+		//if they want to fire a special shot, fire a special shot
 		if (Input.GetKeyDown(KeyCode.S) && isOverHeated == false && activePowerUp == "rocket") {
-			GameObject go = GameObject.Instantiate(spiritBomb, transform.position, Quaternion.identity) as GameObject;
-			GameObject.Destroy(go, 10f);
-
-			//increase the heat of the gun and check to see if it is overheated
-			currentGunHeat += 1.0f;
-
-			if (currentGunHeat >= maxGunHeat) {
-				isOverHeated = true;
-			}
-
+			fireShot (spiritBomb, 10f);
 			//remove this as active powerUp since it is one use
 			activePowerUp = "";
 		}
+	}
+		
+	void fireShot (GameObject gogo, float life) {
+		GameObject go = GameObject.Instantiate(gogo, transform.position, Quaternion.identity) as GameObject;
+		GameObject.Destroy(go, life);
+
+		//increase the heat of the gun and check to see if it is overheated
+		currentGunHeat += 1.0f;
+
+		if (currentGunHeat >= maxGunHeat) {
+			isOverHeated = true;
+		}			
 	}
 
 
