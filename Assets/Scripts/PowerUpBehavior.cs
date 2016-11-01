@@ -19,4 +19,10 @@ public class PowerUpBehavior : MonoBehaviour {
 	void Update () {
 		transform.position += front * Time.deltaTime * 3f;
 	}
+
+	void OnCollisionEnter (Collision col) {
+		if (col.gameObject == GameObject.Find ("Player")) {
+			Destroy (this.gameObject);
+		}
+	}
 }

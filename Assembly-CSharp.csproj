@@ -101,6 +101,7 @@
      <Compile Include="Assets\Pergatory\Standard Assets\Utility\TimedObjectDestructor.cs" />
      <Compile Include="Assets\Pergatory\Standard Assets\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\Pergatory\Standard Assets\Utility\WaypointProgressTracker.cs" />
+     <Compile Include="Assets\Scripts\ActivePowerUp.cs" />
      <Compile Include="Assets\Scripts\BackgroundBehavior.cs" />
      <Compile Include="Assets\Scripts\CameraBehavior.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />

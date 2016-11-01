@@ -6,6 +6,7 @@ public class RingAroundTheRosey : MonoBehaviour {
 
 	Transform Ship_2;
 	public GameObject m_shotPrefab;
+	public GameObject spiritBomb;
 
 	//are any of the arrow keys being held down?
 	private bool keydown = false;
@@ -26,31 +27,20 @@ public class RingAroundTheRosey : MonoBehaviour {
 	public float cooledDown;
 
 	float timeCounter = 0;
-	Vector3 startPos;
-	//Vector3 tunnelPos;
-	float startX;
-	float startY;
-	float startZ;
-	float x;
-	float y;
-	float z;
-	float ratio = 0.75f;
 	float circleIndex = 3*Mathf.PI/2;
-	float rotationAmount = 180/50f;
 	bool rotateLeft = false;
 	bool rotateRight = false;
 
+	//the string that lets ActivePowerUp know what to do
+	private static string activePowerUp;
+
 	// Use this for initialization
 	void Start () {
-		startPos = GameObject.Find("nave").transform.position;
-		//tunnelPos = GameObject.Find("Updatedv3tunnel").transform.position;
-
-		startX = startPos.x;
-		startY = startPos.y;
-		startZ = startPos.z;
 
 		transform.position = playerPoints [currentIndex].position;
 		transform.rotation = playerPoints [currentIndex].rotation;
+
+		activePowerUp = "";
 	}
 	
 	// Update is called once per frame
@@ -100,9 +90,6 @@ public class RingAroundTheRosey : MonoBehaviour {
 		}
 
 		timeCounter += Time.deltaTime;
-		x = ratio * (Mathf.Cos (circleIndex)) + startX;
-		y = ratio * (Mathf.Sin (circleIndex)) + startY + ratio;
-		z = startZ;
 		//transform.position = new Vector3 (x, y, z);
 
 		if (rotateLeft) {
@@ -135,18 +122,32 @@ public class RingAroundTheRosey : MonoBehaviour {
 	}
 
 
+
+
 	void shoot () {
+		//if user wants to fire a regular shot, fire a regular shot
 		if (Input.GetKeyDown(KeyCode.Space) && isOverHeated == false) {
-			GameObject go = GameObject.Instantiate(m_shotPrefab, transform.position, Quaternion.identity) as GameObject;
-			GameObject.Destroy(go, 3f);
-
-			//increase the heat of the gun and check to see if it is overheated
-			currentGunHeat += 1.0f;
-
-			if (currentGunHeat >= maxGunHeat) {
-				isOverHeated = true;
-			}
+			fireShot (m_shotPrefab, 3f);
 		}
+
+		//if they want to fire a special shot, fire a special shot
+		if (Input.GetKeyDown(KeyCode.S) && isOverHeated == false && activePowerUp == "rocket") {
+			fireShot (spiritBomb, 10f);
+			//remove this as active powerUp since it is one use
+			activePowerUp = "";
+		}
+	}
+		
+	void fireShot (GameObject gogo, float life) {
+		GameObject go = GameObject.Instantiate(gogo, transform.position, Quaternion.identity) as GameObject;
+		GameObject.Destroy(go, life);
+
+		//increase the heat of the gun and check to see if it is overheated
+		currentGunHeat += 1.0f;
+
+		if (currentGunHeat >= maxGunHeat) {
+			isOverHeated = true;
+		}			
 	}
 
 
@@ -175,5 +176,18 @@ public class RingAroundTheRosey : MonoBehaviour {
 
 	public int getPositionIndex () {
 		return currentIndex;
+	}
+
+	//when it collides with something
+	void OnCollisionEnter (Collision col) {
+		if (col.gameObject.name == "SandClock(Clone)") {
+			activePowerUp = "sandclock";
+			ActivePowerUp.setActivePowerUp (activePowerUp);
+		} 
+		else if (col.gameObject.name == "Rocket(Clone)") {
+			activePowerUp = "rocket";
+			print ("rocket hit detected");
+			ActivePowerUp.setActivePowerUp (activePowerUp);
+		}
 	}
 }

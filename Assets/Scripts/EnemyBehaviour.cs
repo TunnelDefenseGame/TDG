@@ -46,20 +46,21 @@ public class EnemyBehaviour : MonoBehaviour {
 		enemySpeed  = newEnemySpeed;
 	}
 
+
+
 	public static float getEnemySpeed () {
 		return enemySpeed;
 	}
 
 	void OnCollisionEnter (Collision col) {
-		Destroy (col.gameObject);
-		Destroy (this.gameObject);
-
 		//choose a random explosion to play when the enemy blows up
 		int explosionIndex = Random.Range (0, explosion.Length);
 
 		Object ex = Instantiate(explosion[explosionIndex], this.transform.position,this.transform.rotation);
 		Destroy (ex, explosionLifetime);
 		dropPowerUp ();
+		//Destroy (col.gameObject);
+		Destroy (this.gameObject);
 		//explosion.
 		EnemyManager.score++;
 	}

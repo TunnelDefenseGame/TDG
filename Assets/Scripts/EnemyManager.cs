@@ -30,6 +30,8 @@ public class EnemyManager : MonoBehaviour {
 
 	private int spawnPointIndex;
 
+	private static bool sandClockAcive = false;
+
 	// Use this for initialization
 	void Start () {
 		SpawnerEnabled = true;
@@ -82,16 +84,30 @@ public class EnemyManager : MonoBehaviour {
 				}
 
 
-				temp = EnemyBehaviour.getEnemySpeed ();
-				//increase the speed of the enemies over time, cap out at the max speed
-				if (temp < maxEnemySpeed) {
-					EnemyBehaviour.setEnemySpeed (temp += Mathf.Sqrt (Time.deltaTime));
-				} else if (temp > maxEnemySpeed) {
-					EnemyBehaviour.setEnemySpeed (maxEnemySpeed);
+				if (sandClockAcive) {
+					EnemyBehaviour.setEnemySpeed (ActivePowerUp.sandClockSpeed);
+				} else {
+					temp = EnemyBehaviour.getEnemySpeed ();
+					//increase the speed of the enemies over time, cap out at the max speed
+					if (temp < maxEnemySpeed) {
+						EnemyBehaviour.setEnemySpeed (temp += Mathf.Sqrt (Time.deltaTime));
+					} else if (temp > maxEnemySpeed) {
+						EnemyBehaviour.setEnemySpeed (maxEnemySpeed);
+					}
 				}
 			}
 		}
 	}
+
+	public static void setSandClockActive (bool active) {
+		if (active) {
+			print ("sandClock active");
+		} else {
+			print ("sandClock not active");
+		}
+		sandClockAcive = active;
+	}
+
 
 	//spawn the teleport particle system and kill it before the enemy appears
 	void spawnTeleport () {
