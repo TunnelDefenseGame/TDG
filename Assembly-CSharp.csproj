@@ -45,6 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Lightning\Example\Example.cs" />
+     <Compile Include="Assets\Lightning\Example\Example_move.cs" />
+     <Compile Include="Assets\Lightning\Scripts\Lightning.cs" />
+     <Compile Include="Assets\Lightning\Scripts\LineSubLightning.cs" />
      <Compile Include="Assets\Pergatory\Done_BGScroller.cs" />
      <Compile Include="Assets\Pergatory\Done_DestroyByBoundary.cs" />
      <Compile Include="Assets\Pergatory\Done_DestroyByContact.cs" />
@@ -124,6 +128,7 @@
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset3.shader" />
      <None Include="Assets\Objects\LazerBeam\Shaders\VolumetricLineShaderAdditive.shader" />
+     <None Include="Assets\Lightning\README.txt" />
      <None Include="Assets\Pergatory\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SSAOShader.shader" />
      <None Include="Assets\Pergatory\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
@@ -135,6 +140,7 @@
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
+     <None Include="Assets\Lightning\Shader\ShaderLightning.shader" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
      <None Include="Assets\Objects\LazerBeam\Shaders\VolumetricLineStripShaderAdditive.shader" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
