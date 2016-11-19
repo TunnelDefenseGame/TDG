@@ -18,22 +18,22 @@ public class Example : MonoBehaviour {
 	public Transform TrStart;
 	public Transform TrEnd;
 	[Space(20)]
-	public float Sl_MaxTimeLifeLightning;
-	public float Sl_DeltaTimeNextSubLightning;
-	public float Sl_MaxTimeLifeSubLightning;
+	//public float Sl_MaxTimeLifeLightning;
+	//public float Sl_DeltaTimeNextSubLightning;
+	//public float Sl_MaxTimeLifeSubLightning;
 
 	//public Toggle Tog_HasLoop;
 
-	public float Sl_QuantityIterations;
-	public float Sl_OffsetLine;
-	public float Sl_OffsetPlusDistanseLine;
+	//public float Sl_QuantityIterations;
+	//public float Sl_OffsetLine;
+	//public float Sl_OffsetPlusDistanseLine;
 
-	public float Sl_AngleAdditionalLightning;
-	public float Sl_LengthScaleAdditionalLightning;
-	public float Sl_ProbabilityAdditionalLightning;
+	//public float Sl_AngleAdditionalLightning;
+	//public float Sl_LengthScaleAdditionalLightning;
+	//public float Sl_ProbabilityAdditionalLightning;
 
-	public float Sl_WidthLightning;
-	public float Sl_WidthLightningGlow;
+	//public float Sl_WidthLightning;
+	//public float Sl_WidthLightningGlow;
 
 
 	GameObject newObjLightning;
@@ -57,23 +57,23 @@ public class Example : MonoBehaviour {
 
 	void SetDefault() {
 		if(newObjLightning){
-			Sl_MaxTimeLifeLightning = newLightning.MaxTimeLifeLightning;
-			Sl_DeltaTimeNextSubLightning = newLightning.DeltaTimeNextSubLightning;
-			Sl_MaxTimeLifeSubLightning = newLightning.MaxTimeLifeSubLightning;
+		//	Sl_MaxTimeLifeLightning = newLightning.MaxTimeLifeLightning;
+		//	Sl_DeltaTimeNextSubLightning = newLightning.DeltaTimeNextSubLightning;
+		//	Sl_MaxTimeLifeSubLightning = newLightning.MaxTimeLifeSubLightning;
 			
 	//		Tog_HasLoop.isOn = newLightning.HasLoop;
 			SetColor((int)SelectColor.Blue);
 			
-			Sl_QuantityIterations = (float)newLightning.QuantityIterations;
-			Sl_OffsetLine = newLightning.OffsetLine;
-			Sl_OffsetPlusDistanseLine = newLightning.OffsetPlusDistanseLine;
+		//	Sl_QuantityIterations = (float)newLightning.QuantityIterations;
+		//	Sl_OffsetLine = newLightning.OffsetLine;
+		//	Sl_OffsetPlusDistanseLine = newLightning.OffsetPlusDistanseLine;
 			
-			Sl_AngleAdditionalLightning = newLightning.AngleAdditionalLightning;
-			Sl_LengthScaleAdditionalLightning = newLightning.LengthScaleAdditionalLightning;
-			Sl_ProbabilityAdditionalLightning = newLightning.ProbabilityAdditionalLightning;
+		//	Sl_AngleAdditionalLightning = newLightning.AngleAdditionalLightning;
+		//	Sl_LengthScaleAdditionalLightning = newLightning.LengthScaleAdditionalLightning;
+		//	Sl_ProbabilityAdditionalLightning = newLightning.ProbabilityAdditionalLightning;
 
-			Sl_WidthLightning = newLightning.WidthLightning;
-			Sl_WidthLightningGlow = newLightning.WidthLightningGlow;
+		//	Sl_WidthLightning = newLightning.WidthLightning;
+		//	Sl_WidthLightningGlow = newLightning.WidthLightningGlow;
 		}
 		
 		
