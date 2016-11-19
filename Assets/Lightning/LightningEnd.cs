@@ -30,8 +30,8 @@ public class LightningEnd : MonoBehaviour {
 	void Update () {
 		degree = Random.Range (lowDegree, highDegree);
 		degree = (degree * Mathf.PI / 180);
-		x = length * Mathf.Cos (degree);
-		y = length * Mathf.Sin (degree);
+		x = startZ.position.x + (length * Mathf.Cos (degree));
+		y = startZ.position.y + (length * Mathf.Sin (degree));
 		transform.position = new Vector3(x, y, startZ.position.z);
 	}
 }
