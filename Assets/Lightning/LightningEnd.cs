@@ -13,6 +13,9 @@ public class LightningEnd : MonoBehaviour {
 	[Space(20)]
 	public float lowDegree;
 	public float highDegree;
+	[Space(20)]
+	public Transform startZ;
+
 	
 	private float degree;
 	private float x;
@@ -29,6 +32,6 @@ public class LightningEnd : MonoBehaviour {
 		degree = (degree * Mathf.PI / 180);
 		x = length * Mathf.Cos (degree);
 		y = length * Mathf.Sin (degree);
-		transform.position = new Vector3(x, y, transform.position.z);
+		transform.position = new Vector3(x, y, startZ.position.z);
 	}
 }
