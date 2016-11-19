@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Lightning\Example\Example.cs" />
      <Compile Include="Assets\Lightning\Example\Example_move.cs" />
+     <Compile Include="Assets\Lightning\LightningEnd.cs" />
      <Compile Include="Assets\Lightning\Scripts\Lightning.cs" />
      <Compile Include="Assets\Lightning\Scripts\LineSubLightning.cs" />
      <Compile Include="Assets\Pergatory\Done_BGScroller.cs" />
