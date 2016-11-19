@@ -1,14 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyBehaviour.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Lightning/Example/Example.cs">
     <Files>
-      <File FileName="Assets/Scripts/RingAroundTheRosey.cs" Line="140" Column="3" />
+      <File FileName="Assets/Scripts/RingAroundTheRosey.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/EnemyBehaviour.cs" Line="63" Column="29" />
-      <File FileName="Assets/Scripts/ActivePowerUp.cs" Line="30" Column="32" />
+      <File FileName="Assets/Scripts/ActivePowerUp.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PowerUpBehavior.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyManager.cs" Line="106" Column="22" />
-      <File FileName="Assets/Scripts/LazerScripts/ShotMegaBehavior.cs" Line="32" Column="1" />
-      <File FileName="Assets/Scripts/LazerScripts/ShotBehavior.cs" Line="30" Column="2" />
+      <File FileName="Assets/Scripts/EnemyManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/LazerScripts/ShotBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets/Lightning/README.txt" Line="16" Column="1" />
+      <File FileName="Assets/Lightning/Example/ImTrying.cs" Line="30" Column="2" />
+      <File FileName="Assets/Lightning/Example/Example_move.cs" Line="10" Column="50" />
+      <File FileName="Assets/Lightning/Scripts/Lightning.cs" Line="1" Column="1" />
+      <File FileName="Assets/Lightning/Example/Example.cs" Line="100" Column="49" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

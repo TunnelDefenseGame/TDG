@@ -13,34 +13,34 @@ public enum SelectColor{
 public class Example : MonoBehaviour {
 	public GameObject PrefabLightning;
 	public Transform ParentTransform;
-	public Button B_CreateLightning;
+//	public Button B_CreateLightning;
 	[Space(20)]
 	public Transform TrStart;
 	public Transform TrEnd;
 	[Space(20)]
-	public Slider Sl_MaxTimeLifeLightning;
-	public Slider Sl_DeltaTimeNextSubLightning;
-	public Slider Sl_MaxTimeLifeSubLightning;
+	public float Sl_MaxTimeLifeLightning;
+	public float Sl_DeltaTimeNextSubLightning;
+	public float Sl_MaxTimeLifeSubLightning;
 
-	public Toggle Tog_HasLoop;
+	//public Toggle Tog_HasLoop;
 
-	public Slider Sl_QuantityIterations;
-	public Slider Sl_OffsetLine;
-	public Slider Sl_OffsetPlusDistanseLine;
+	public float Sl_QuantityIterations;
+	public float Sl_OffsetLine;
+	public float Sl_OffsetPlusDistanseLine;
 
-	public Slider Sl_AngleAdditionalLightning;
-	public Slider Sl_LengthScaleAdditionalLightning;
-	public Slider Sl_ProbabilityAdditionalLightning;
+	public float Sl_AngleAdditionalLightning;
+	public float Sl_LengthScaleAdditionalLightning;
+	public float Sl_ProbabilityAdditionalLightning;
 
-	public Slider Sl_WidthLightning;
-	public Slider Sl_WidthLightningGlow;
+	public float Sl_WidthLightning;
+	public float Sl_WidthLightningGlow;
 
 
 	GameObject newObjLightning;
 	Lightning newLightning = null;
 
 	void Start () {
-		B_CreateLightning.onClick.AddListener(() => { CreateLightning(); });
+	//	B_CreateLightning.onClick.AddListener(() => { CreateLightning(); });
 
 		CreateLightning();
 	}
@@ -51,48 +51,48 @@ public class Example : MonoBehaviour {
 			newLightning.SetEndPos(TrEnd.localPosition);
 		}
 		else {
-			B_CreateLightning.interactable = true;
+		//	B_CreateLightning.interactable = true;
 		}
 	}
 
 	void SetDefault() {
 		if(newObjLightning){
-			Sl_MaxTimeLifeLightning.value = newLightning.MaxTimeLifeLightning;
-			Sl_DeltaTimeNextSubLightning.value = newLightning.DeltaTimeNextSubLightning;
-			Sl_MaxTimeLifeSubLightning.value = newLightning.MaxTimeLifeSubLightning;
+			Sl_MaxTimeLifeLightning = newLightning.MaxTimeLifeLightning;
+			Sl_DeltaTimeNextSubLightning = newLightning.DeltaTimeNextSubLightning;
+			Sl_MaxTimeLifeSubLightning = newLightning.MaxTimeLifeSubLightning;
 			
-			Tog_HasLoop.isOn = newLightning.HasLoop;
+	//		Tog_HasLoop.isOn = newLightning.HasLoop;
 			SetColor((int)SelectColor.Blue);
 			
-			Sl_QuantityIterations.value = (float)newLightning.QuantityIterations;
-			Sl_OffsetLine.value = newLightning.OffsetLine;
-			Sl_OffsetPlusDistanseLine.value = newLightning.OffsetPlusDistanseLine;
+			Sl_QuantityIterations = (float)newLightning.QuantityIterations;
+			Sl_OffsetLine = newLightning.OffsetLine;
+			Sl_OffsetPlusDistanseLine = newLightning.OffsetPlusDistanseLine;
 			
-			Sl_AngleAdditionalLightning.value = newLightning.AngleAdditionalLightning;
-			Sl_LengthScaleAdditionalLightning.value = newLightning.LengthScaleAdditionalLightning;
-			Sl_ProbabilityAdditionalLightning.value = newLightning.ProbabilityAdditionalLightning;
+			Sl_AngleAdditionalLightning = newLightning.AngleAdditionalLightning;
+			Sl_LengthScaleAdditionalLightning = newLightning.LengthScaleAdditionalLightning;
+			Sl_ProbabilityAdditionalLightning = newLightning.ProbabilityAdditionalLightning;
 
-			Sl_WidthLightning.value = newLightning.WidthLightning;
-			Sl_WidthLightningGlow.value = newLightning.WidthLightningGlow;
+			Sl_WidthLightning = newLightning.WidthLightning;
+			Sl_WidthLightningGlow = newLightning.WidthLightningGlow;
 		}
 		
 		
-		Sl_MaxTimeLifeLightning.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.MaxTimeLifeLightning = value; });
-		Sl_DeltaTimeNextSubLightning.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.DeltaTimeNextSubLightning = value; });
-		Sl_MaxTimeLifeSubLightning.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.MaxTimeLifeSubLightning = value; });
+	//	Sl_MaxTimeLifeLightning.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.MaxTimeLifeLightning = value; });
+	//	Sl_DeltaTimeNextSubLightning.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.DeltaTimeNextSubLightning = value; });
+	//	Sl_MaxTimeLifeSubLightning.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.MaxTimeLifeSubLightning = value; });
 		
-		Tog_HasLoop.onValueChanged.AddListener((bool value) => { if(newObjLightning) newLightning.HasLoop = value; });
+	//	Tog_HasLoop.onValueChanged.AddListener((bool value) => { if(newObjLightning) newLightning.HasLoop = value; });
 		
-		Sl_QuantityIterations.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.QuantityIterations = (int)value; });
-		Sl_OffsetLine.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.OffsetLine = value; });
-		Sl_OffsetPlusDistanseLine.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.OffsetPlusDistanseLine = value; });
+	//	Sl_QuantityIterations.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.QuantityIterations = (int)value; });
+	//	Sl_OffsetLine.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.OffsetLine = value; });
+	//	Sl_OffsetPlusDistanseLine.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.OffsetPlusDistanseLine = value; });
 		
-		Sl_AngleAdditionalLightning.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.AngleAdditionalLightning = value; });
-		Sl_LengthScaleAdditionalLightning.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.LengthScaleAdditionalLightning = value; });
-		Sl_ProbabilityAdditionalLightning.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.ProbabilityAdditionalLightning = value; });
+	//	Sl_AngleAdditionalLightning.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.AngleAdditionalLightning = value; });
+	//	Sl_LengthScaleAdditionalLightning.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.LengthScaleAdditionalLightning = value; });
+	//	Sl_ProbabilityAdditionalLightning.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.ProbabilityAdditionalLightning = value; });
 
-		Sl_WidthLightning.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.WidthLightning = value; });
-		Sl_WidthLightningGlow.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.WidthLightningGlow = value; });
+	//	Sl_WidthLightning.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.WidthLightning = value; });
+	//	Sl_WidthLightningGlow.onValueChanged.AddListener((float value) => { if(newObjLightning) newLightning.WidthLightningGlow = value; });
 	}
 
 	void CreateLightning() {
@@ -105,7 +105,7 @@ public class Example : MonoBehaviour {
 			SetDefault();
 			newLightning.Create(TrStart.localPosition, TrEnd.localPosition);
 			
-			B_CreateLightning.interactable = false;
+		//	B_CreateLightning.interactable = false;
 		}
 	}
 
