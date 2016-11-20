@@ -50,6 +50,7 @@
      <Compile Include="Assets\Lightning\LightningEnd.cs" />
      <Compile Include="Assets\Lightning\Scripts\Lightning.cs" />
      <Compile Include="Assets\Lightning\Scripts\LineSubLightning.cs" />
+     <Compile Include="Assets\MiddleMove.cs" />
      <Compile Include="Assets\Pergatory\Done_BGScroller.cs" />
      <Compile Include="Assets\Pergatory\Done_DestroyByBoundary.cs" />
      <Compile Include="Assets\Pergatory\Done_DestroyByContact.cs" />
