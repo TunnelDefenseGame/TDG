@@ -3,9 +3,7 @@ using System.Collections;
 
 public class MiddleMove : MonoBehaviour {
 
-	public GameObject startPoint;
-	public GameObject controlPoint;
-	public GameObject endPoint;
+	public float speed;
 
 
 	private Vector3 sp; 
@@ -23,6 +21,7 @@ public class MiddleMove : MonoBehaviour {
 	private float CurveX;
 	private float CurveY;
 	private float CurveZ;
+	private float z;
 	private float BezierTime;
 
 	// Use this for initialization
@@ -47,11 +46,12 @@ public class MiddleMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		BezierTime = BezierTime + Time.deltaTime;
+		BezierTime = BezierTime + Time.deltaTime * speed;
 
 		if (BezierTime >= 1) {
 			BezierTime = 1;
-
+			z = this.transform.position.z + speed * 0.2f;
+			this.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y, z);
 		} else {
 			//this will move along a curve toward a point in the middle of the tunnel toward the camera
 			CurveX = (((1 - BezierTime) * (1 - BezierTime)) * StartPointX) + (2 * BezierTime * (1 - BezierTime) * ControlPointX) + ((BezierTime * BezierTime) * EndPointX);
