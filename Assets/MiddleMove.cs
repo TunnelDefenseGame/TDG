@@ -4,7 +4,7 @@ using System.Collections;
 public class MiddleMove : MonoBehaviour {
 
 	public float speed;
-
+	public GameObject EnergyPowerUp;
 
 	private Vector3 sp; 
 	private Vector3 cp; 
@@ -24,6 +24,10 @@ public class MiddleMove : MonoBehaviour {
 	private float z;
 	private float BezierTime;
 
+	private GameObject energy;
+
+	private bool lightningIsSpawned;
+
 	// Use this for initialization
 	void Start () {
 		BezierTime = 0;
@@ -41,6 +45,7 @@ public class MiddleMove : MonoBehaviour {
 		EndPointX = ep.x;
 		EndPointY = ep.y;
 		EndPointZ = ep.z;
+		lightningIsSpawned = false;
 
 	}
 	
@@ -50,8 +55,14 @@ public class MiddleMove : MonoBehaviour {
 
 		if (BezierTime >= 1) {
 			BezierTime = 1;
-			z = this.transform.position.z + speed * 0.2f;
+			if (!lightningIsSpawned) {
+				energy = (GameObject)Instantiate (EnergyPowerUp, this.transform.position, Quaternion.identity);
+				lightningIsSpawned = true;
+			}
+			z = this.transform.position.z + speed * 0.15f;
 			this.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y, z);
+			energy.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y, this.transform.position.z);
+
 		} else {
 			//this will move along a curve toward a point in the middle of the tunnel toward the camera
 			CurveX = (((1 - BezierTime) * (1 - BezierTime)) * StartPointX) + (2 * BezierTime * (1 - BezierTime) * ControlPointX) + ((BezierTime * BezierTime) * EndPointX);
@@ -59,6 +70,12 @@ public class MiddleMove : MonoBehaviour {
 			CurveZ = (((1 - BezierTime) * (1 - BezierTime)) * StartPointZ) + (2 * BezierTime * (1 - BezierTime) * ControlPointZ) + ((BezierTime * BezierTime) * EndPointZ);
 			this.transform.position = new Vector3 (CurveX, CurveY, CurveZ);
 	
+		}
+
+		//kill the objects once they reach the end of the tunnel
+		if (this.transform.position.z > -10) {
+			Destroy (energy);
+			Destroy(this.gameObject);
 		}
 	}
 }
