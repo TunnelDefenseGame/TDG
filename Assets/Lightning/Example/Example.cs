@@ -62,7 +62,7 @@ public class Example : MonoBehaviour {
 		//	Sl_MaxTimeLifeSubLightning = newLightning.MaxTimeLifeSubLightning;
 			
 	//		Tog_HasLoop.isOn = newLightning.HasLoop;
-			SetColor((int)SelectColor.Blue);
+	//		SetColor((int)SelectColor.Blue);
 			
 		//	Sl_QuantityIterations = (float)newLightning.QuantityIterations;
 		//	Sl_OffsetLine = newLightning.OffsetLine;
