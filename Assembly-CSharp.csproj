@@ -50,7 +50,6 @@
      <Compile Include="Assets\Lightning\LightningEnd.cs" />
      <Compile Include="Assets\Lightning\Scripts\Lightning.cs" />
      <Compile Include="Assets\Lightning\Scripts\LineSubLightning.cs" />
-     <Compile Include="Assets\MiddleMove.cs" />
      <Compile Include="Assets\Pergatory\Done_BGScroller.cs" />
      <Compile Include="Assets\Pergatory\Done_DestroyByBoundary.cs" />
      <Compile Include="Assets\Pergatory\Done_DestroyByContact.cs" />
@@ -118,6 +117,7 @@
      <Compile Include="Assets\Scripts\LazerScripts\Utils\TransformExtensionMethods.cs" />
      <Compile Include="Assets\Scripts\LazerScripts\VolumetricLineBehavior.cs" />
      <Compile Include="Assets\Scripts\LazerScripts\VolumetricLineStripBehavior.cs" />
+     <Compile Include="Assets\Scripts\MiddleMove.cs" />
      <Compile Include="Assets\Scripts\PowerUpBehavior.cs" />
      <Compile Include="Assets\Scripts\RingAroundTheRosey.cs" />
      <Compile Include="Assets\Scripts\TunnelBehavior.cs" />

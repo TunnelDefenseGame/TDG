@@ -22,6 +22,8 @@ public class EnemyBehaviour : MonoBehaviour {
 	//random index of powerups to see which one drops
 	private int powerUpIndex;
 
+	//has this ship been struck by lightning?
+	private bool isStruck;
 
 	Vector3 front;
 
@@ -34,11 +36,20 @@ public class EnemyBehaviour : MonoBehaviour {
 
 		//destroy this enemy after a determined time
 		Destroy (this.gameObject, 7);
+		isStruck = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position += front * Time.deltaTime * 3f;
+		if (!isStruck) {
+			transform.position += front * Time.deltaTime * 3f;
+		}
+		if (GameObject.Find ("EnergyPowerUp(Clone)") != null) {
+			if ((this.transform.position.z <= GameObject.Find ("EnergyPowerUp(Clone)").transform.position.z) && (this.transform.position.z >= GameObject.Find ("EnergyPowerUp(Clone)").transform.position.z - 0.5) && !isStruck) {
+				print ("hello");
+				isStruck = true;
+			}
+		}
 	}
 
 
