@@ -48,10 +48,15 @@ public class EnemyBehaviour : MonoBehaviour {
 			if ((this.transform.position.z <= GameObject.Find ("EnergyPowerUp(Clone)").transform.position.z) && (this.transform.position.z >= GameObject.Find ("EnergyPowerUp(Clone)").transform.position.z - 0.5) && !isStruck) {
 				print ("hello");
 				isStruck = true;
+				kill();
 			}
 		}
 	}
 
+	public void kill() {
+		//kill this object in a second
+		Destroy (this.gameObject, 1.0f);
+	}
 
 	public static void setEnemySpeed (float newEnemySpeed) {
 		enemySpeed  = newEnemySpeed;
