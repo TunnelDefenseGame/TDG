@@ -18,6 +18,6 @@ public class BoltBehavior : MonoBehaviour {
 
 	public void createBolt() {
 		//activeBolt = (GameObject)Instantiate (boltTemplate, this.transform.position, Quaternion.identity);
-		print ("hello");
+
 	}
 }
