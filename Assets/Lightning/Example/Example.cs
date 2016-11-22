@@ -22,8 +22,6 @@ public class Example : MonoBehaviour {
 			newLightning.SetStartPos(TrStart.localPosition);
 			newLightning.SetEndPos(TrEnd.localPosition);
 		}
-		else {
-		}
 	}
 
 	void CreateLightning() {

@@ -25,6 +25,8 @@ public class EnemyBehaviour : MonoBehaviour {
 	//has this ship been struck by lightning?
 	private bool isStruck;
 
+	private GameObject EnergyPower;
+
 	Vector3 front;
 
 	// Use this for initialization
@@ -44,11 +46,14 @@ public class EnemyBehaviour : MonoBehaviour {
 		if (!isStruck) {
 			transform.position += front * Time.deltaTime * 3f;
 		}
-		if (GameObject.Find ("EnergyPowerUp(Clone)") != null) {
-			if ((this.transform.position.z <= GameObject.Find ("EnergyPowerUp(Clone)").transform.position.z) && (this.transform.position.z >= GameObject.Find ("EnergyPowerUp(Clone)").transform.position.z - 0.5) && !isStruck) {
-				print ("hello");
+		EnergyPower = GameObject.Find ("EnergyPowerUp(Clone)");
+
+		if (EnergyPower != null) {
+			if ((this.transform.position.z <= EnergyPower.transform.position.z) && (this.transform.position.z >= EnergyPower.transform.position.z - 0.5) && !isStruck) {
 				isStruck = true;
 				Invoke("kill", 1.0f);
+				EnergyPower.GetComponent<BoltBehavior>().createBolt();
+				//EnergyPower.createBolt ();
 			}
 		}
 	}

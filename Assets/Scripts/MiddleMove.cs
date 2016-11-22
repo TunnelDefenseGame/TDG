@@ -5,6 +5,7 @@ public class MiddleMove : MonoBehaviour {
 
 	public float speed;
 	public GameObject EnergyPowerUp;
+	public GameObject PrefabLightning;
 
 	private Vector3 sp; 
 	private Vector3 cp; 
@@ -25,6 +26,8 @@ public class MiddleMove : MonoBehaviour {
 	private float BezierTime;
 
 	private GameObject energy;
+	GameObject newObjLightning;
+	Lightning newLightning = null;
 
 	private bool lightningIsSpawned;
 
@@ -77,5 +80,10 @@ public class MiddleMove : MonoBehaviour {
 			Destroy (energy);
 			Destroy(this.gameObject);
 		}
+	}
+
+
+	public void createBolt (Transform endpoint) {
+		print ("working");
 	}
 }
