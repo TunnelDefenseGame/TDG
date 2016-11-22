@@ -48,14 +48,22 @@ public class EnemyBehaviour : MonoBehaviour {
 			if ((this.transform.position.z <= GameObject.Find ("EnergyPowerUp(Clone)").transform.position.z) && (this.transform.position.z >= GameObject.Find ("EnergyPowerUp(Clone)").transform.position.z - 0.5) && !isStruck) {
 				print ("hello");
 				isStruck = true;
-				kill();
+				Invoke("kill", 1.0f);
 			}
 		}
 	}
 
 	public void kill() {
-		//kill this object in a second
-		Destroy (this.gameObject, 1.0f);
+		//choose a random explosion to play when the enemy blows up
+		int explosionIndex = Random.Range (0, explosion.Length);
+
+		Object ex = Instantiate(explosion[explosionIndex], this.transform.position,this.transform.rotation);
+		Destroy (ex, explosionLifetime);
+		dropPowerUp ();
+		//Destroy (col.gameObject);
+		Destroy (this.gameObject);
+		//explosion.
+		EnemyManager.score++;
 	}
 
 	public static void setEnemySpeed (float newEnemySpeed) {
@@ -69,16 +77,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	void OnCollisionEnter (Collision col) {
-		//choose a random explosion to play when the enemy blows up
-		int explosionIndex = Random.Range (0, explosion.Length);
-
-		Object ex = Instantiate(explosion[explosionIndex], this.transform.position,this.transform.rotation);
-		Destroy (ex, explosionLifetime);
-		dropPowerUp ();
-		//Destroy (col.gameObject);
-		Destroy (this.gameObject);
-		//explosion.
-		EnemyManager.score++;
+		kill ();
 	}
 
 	//determine if we should drop a powerup and drop a random one
