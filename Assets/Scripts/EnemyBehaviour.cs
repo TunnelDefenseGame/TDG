@@ -52,7 +52,7 @@ public class EnemyBehaviour : MonoBehaviour {
 			if ((this.transform.position.z <= EnergyPower.transform.position.z) && (this.transform.position.z >= EnergyPower.transform.position.z - 0.5) && !isStruck) {
 				isStruck = true;
 				Invoke("kill", 1.0f);
-				EnergyPower.GetComponent<BoltBehavior>().createBolt();
+				EnergyPower.GetComponent<BoltBehavior>().createBolt(this.gameObject);
 				//EnergyPower.createBolt ();
 			}
 		}
