@@ -81,9 +81,4 @@ public class MiddleMove : MonoBehaviour {
 			Destroy(this.gameObject);
 		}
 	}
-
-
-	public void createBolt (Transform endpoint) {
-		print ("working");
-	}
 }

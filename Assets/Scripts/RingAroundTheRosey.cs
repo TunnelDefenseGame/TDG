@@ -132,7 +132,7 @@ public class RingAroundTheRosey : MonoBehaviour {
 
 		//if they want to fire a special shot, fire a special shot
 		if (Input.GetKeyDown(KeyCode.S) && isOverHeated == false && activePowerUp == "rocket") {
-			fireShot (spiritBomb, 10f);
+			fireShot (spiritBomb, 20f);
 			//remove this as active powerUp since it is one use
 			activePowerUp = "";
 		}

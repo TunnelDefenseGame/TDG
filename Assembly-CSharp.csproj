@@ -45,8 +45,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Example.cs" />
-     <Compile Include="Assets\Lightning\LightningEnd.cs" />
      <Compile Include="Assets\Lightning\Scripts\Lightning.cs" />
      <Compile Include="Assets\Lightning\Scripts\LineSubLightning.cs" />
      <Compile Include="Assets\Pergatory\Done_BGScroller.cs" />
@@ -112,11 +110,13 @@
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\EnemyManager.cs" />
+     <Compile Include="Assets\Scripts\Example.cs" />
      <Compile Include="Assets\Scripts\LazerScripts\ShotBehavior.cs" />
      <Compile Include="Assets\Scripts\LazerScripts\Utils\ExposePropertyAttribute.cs" />
      <Compile Include="Assets\Scripts\LazerScripts\Utils\TransformExtensionMethods.cs" />
      <Compile Include="Assets\Scripts\LazerScripts\VolumetricLineBehavior.cs" />
      <Compile Include="Assets\Scripts\LazerScripts\VolumetricLineStripBehavior.cs" />
+     <Compile Include="Assets\Scripts\LightningEnd.cs" />
      <Compile Include="Assets\Scripts\MiddleMove.cs" />
      <Compile Include="Assets\Scripts\PowerUpBehavior.cs" />
      <Compile Include="Assets\Scripts\RingAroundTheRosey.cs" />
