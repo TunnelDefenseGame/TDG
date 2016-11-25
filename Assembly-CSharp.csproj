@@ -45,9 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BoltBehavior.cs" />
-     <Compile Include="Assets\Lightning\Example\Example.cs" />
-     <Compile Include="Assets\Lightning\Example\Example_move.cs" />
+     <Compile Include="Assets\Example.cs" />
      <Compile Include="Assets\Lightning\LightningEnd.cs" />
      <Compile Include="Assets\Lightning\Scripts\Lightning.cs" />
      <Compile Include="Assets\Lightning\Scripts\LineSubLightning.cs" />
@@ -109,6 +107,7 @@
      <Compile Include="Assets\Pergatory\Standard Assets\Utility\WaypointProgressTracker.cs" />
      <Compile Include="Assets\Scripts\ActivePowerUp.cs" />
      <Compile Include="Assets\Scripts\BackgroundBehavior.cs" />
+     <Compile Include="Assets\Scripts\BoltBehavior.cs" />
      <Compile Include="Assets\Scripts\CameraBehavior.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
