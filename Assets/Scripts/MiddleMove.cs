@@ -62,7 +62,7 @@ public class MiddleMove : MonoBehaviour {
 				energy = (GameObject)Instantiate (EnergyPowerUp, this.transform.position, Quaternion.identity);
 				lightningIsSpawned = true;
 			}
-			z = this.transform.position.z + speed * 0.15f;
+			z = this.transform.position.z + speed * 0.1f;
 			this.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y, z);
 			energy.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y, this.transform.position.z);
 
