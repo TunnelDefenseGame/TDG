@@ -76,7 +76,7 @@ public class MiddleMove : MonoBehaviour {
 		}
 
 		//kill the objects once they reach the end of the tunnel
-		if (this.transform.position.z > -10) {
+		if (this.transform.position.z > -9) {
 			Destroy (energy);
 			Destroy(this.gameObject);
 		}
