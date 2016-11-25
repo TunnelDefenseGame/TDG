@@ -112,6 +112,12 @@
      <Compile Include="Assets\Scripts\LazerScripts\Utils\TransformExtensionMethods.cs" />
      <Compile Include="Assets\Scripts\LazerScripts\VolumetricLineBehavior.cs" />
      <Compile Include="Assets\Scripts\LazerScripts\VolumetricLineStripBehavior.cs" />
+     <Compile Include="Assets\Scripts\Lightning\BoltBehavior.cs" />
+     <Compile Include="Assets\Scripts\Lightning\Example.cs" />
+     <Compile Include="Assets\Scripts\Lightning\Lightning.cs" />
+     <Compile Include="Assets\Scripts\Lightning\LightningEnd.cs" />
+     <Compile Include="Assets\Scripts\Lightning\LineSubLightning.cs" />
+     <Compile Include="Assets\Scripts\Lightning\MiddleMove.cs" />
      <Compile Include="Assets\Scripts\PowerUpBehavior.cs" />
      <Compile Include="Assets\Scripts\RingAroundTheRosey.cs" />
      <Compile Include="Assets\Scripts\TunnelBehavior.cs" />
@@ -135,6 +141,7 @@
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
+     <None Include="Assets\Objects\PowerUp\Shader\ShaderLightning.shader" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
      <None Include="Assets\Objects\LazerBeam\Shaders\VolumetricLineStripShaderAdditive.shader" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />

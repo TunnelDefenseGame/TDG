@@ -66,6 +66,7 @@
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
+     <None Include="Assets\Objects\PowerUp\Shader\ShaderLightning.shader" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
      <None Include="Assets\Objects\LazerBeam\Shaders\VolumetricLineStripShaderAdditive.shader" />
      <None Include="Assets\Pergatory\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
