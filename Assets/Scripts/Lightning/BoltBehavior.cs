@@ -33,7 +33,7 @@ public class BoltBehavior : MonoBehaviour {
 
 		ship = end;
 		newLightning.Create(this.transform.position, end.transform.position);
-		Destroy (activeBolt.gameObject, 1.0f);
-		Destroy (newLightning.gameObject, 1.0f);
+		Destroy (activeBolt.gameObject, 0.9f);
+		Destroy (newLightning.gameObject, 0.9f);
 	}
 }
